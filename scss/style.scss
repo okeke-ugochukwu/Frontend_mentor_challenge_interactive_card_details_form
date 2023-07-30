@@ -1,0 +1,425 @@
+@import './mini/reset';
+@import './mini/colors';
+@import './mini/fonts';
+@import './mini/mixins';
+@import './mini/screens';
+
+* {
+   font-family: 'Space Grotesk', sans-serif;
+   outline: 1px solid black;
+}
+
+body {
+   width: 100vw;
+   height: 100vh;
+   font-style: normal;
+   font-weight: 500;
+   background: white;
+   min-width: 290px;
+   
+   @include laps {
+      min-height: 577px;
+   }
+}
+
+main {
+   width: 100%;
+   height: 100%;
+
+   @include laps {
+      display: flex;
+   }
+}
+
+.card-preview-block {
+   width: 100%;
+   height: 34.09%;
+   min-height: 240px;
+   padding: 0.01px;
+
+   @include laps {
+      width: 350px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   @include desktop {
+      width: 33.54%;
+   }
+
+   @include desktopX {
+      max-width: 670px;
+   }
+}
+
+.card-preview {
+   width: 91.46%;
+   max-width: 381px;
+   height: max-content;
+   margin: 32px auto 0;
+   position: relative;
+   display: flex;
+   justify-content: center;
+
+   .card {
+      min-width: 285px;
+      max-width: 285px;
+      min-height: 156.208px;
+      position: absolute;
+      aspect-ratio: 1/0.5480984340044743;
+      background: rgba(219, 218, 218, 0.973);
+
+      &_logo {
+         width: max-content;
+         display: flex;
+         align-items: center;
+         gap: 15.91px;
+
+         div:nth-child(1) {
+            width: 30.19px; height: 30px;
+         }  
+
+         div:nth-child(2) {
+            width: 13.58px; height: 13.5px;
+         }
+      }
+
+      &_number {
+         margin: 37px 0px 17px 0px;
+         font-size: 1.125rem; //18px      
+         line-height: normal;
+         letter-spacing: 2.2px;
+      }
+      
+      &_name_and_exp {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         font-size: 0.5625rem; //9px
+         line-height: normal;
+         letter-spacing: 1.286px;
+         text-transform: uppercase;
+      }
+
+      &_bar {
+         width: 100%;
+         height: 34.604px;
+         background: #2F2F2F;
+         margin: 15px 0px;
+      }
+
+      &_cvc {
+         font-weight: 500;
+         line-height: normal;
+         font-size: 0.5625rem; //9px
+         letter-spacing: 0.0804rem; //1.286px
+         text-align: right;
+         height: 29.739px;
+         width: 85.82%;
+         margin: 0 auto;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         padding: 0px 11px;
+      }
+
+      &_text_illstn {
+         display: block;
+         width: 41.61%;
+         margin: 20px auto 0px auto;
+      }
+   }
+
+   &_front {
+      left: 0;
+      top: 94px;
+      z-index: 1;
+      padding: 17.6px 20.89px 20.6px 19px;
+   }
+
+   &_back {
+      right: 0;
+   }
+
+   @include laps {
+      width: max-content;
+      flex-direction: column;
+      gap: 37px;
+      margin: 0px auto 0 15.38vw;
+
+      .card {
+         position: relative;
+         min-width: 320px;
+
+         &_number {
+            margin: 60px 0px 17px 0px;
+         }
+      }
+      
+      &_front {
+         top: 0px;
+      }
+
+      &_back {
+         left: 64px  ;
+        
+      }
+   }
+
+   @include desktop {
+      .card {
+         width: 31.04vw;
+         max-width: 447px;
+
+         &_logo {
+            div:nth-child(1) {
+               width: 46.96px; height: 47px;
+            }  
+   
+            div:nth-child(2) {
+               width: 21.13px; height: 21.15px;
+            }
+         }
+
+         &_number {
+            letter-spacing: 3.424px; //3.422px
+            font-size: 25px;
+            margin: 64px 0px 20.5px 0px;
+         }
+
+         &_name_and_exp {
+            font-size: 0.875rem; //14px
+            letter-spacing: 0.125rem; //2px
+         }
+
+         &_bar {
+            height: 22.04%;
+            margin: 23px 0px;
+         }
+   
+         &_cvc {
+            height: 38px;
+            width: 80.76%;
+            position: relative;
+            left: 4px;
+            font-size: 0.875rem; //14px
+            letter-spacing: 0.125rem; //2px
+         }
+   
+         &_text_illstn {
+            width: 41.61%;
+            margin: 33px auto 0px auto;
+         }
+      }
+
+      &_front {
+         padding: 20.6px 27.89px 27.6px 27px;
+      }
+
+      &_back {
+         left: 88px;
+      }
+   }
+
+   @include desktopX {
+      margin: 0px auto 0 16.38vw;
+
+      .card {
+         min-width: 447px;
+
+         &_number {
+            font-size: 28px;
+            margin: 64.5px 0px 25.5px 0px;
+         }
+      }
+
+      &_front {
+         padding: 28px 31.86px 26.5px 31px;
+         margin-left: -4px;
+         margin-top: 1px;
+      }
+   }
+}
+
+
+.card-details-block {
+   padding: 91px 0px 45px 0px;
+
+   
+   @include laps {
+      width: calc(100% - 350px);
+    //   width: 71.46%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   @include desktop {
+      width: 66.46%;
+   }
+}
+
+.card-form {
+   width: 91.46%;
+   margin: 0 auto ;
+   max-width: 381px;
+
+   form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      fieldset {
+         display: flex;
+         flex-direction: column;
+         gap: 9px;
+         padding: 0;
+         border: none;
+
+         &.card-exp-cvc {
+            flex-direction: row;
+
+            & > div {
+               display: none;
+               width: 50%;
+               display: flex;
+               flex-direction: column;
+               gap: 9px;
+            }
+         }
+
+         .card-exp {
+            display: flex;
+            gap: 10px;
+         }
+      }
+
+      label {
+         font-size: 0.75rem; //12px 
+         display: block;
+         font-weight: 700;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+      }
+
+      .input-container {
+         width: 100%;
+         height: 45px;
+         border-radius: 8px;
+         padding: 1px;
+         position: relative;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+      }
+     
+      input {
+         padding: 0px 16px;
+         font-size: 1.125rem; //18px
+         font-weight: 500;
+         display: block;
+         width: 100%;
+         height: 100%;
+         border-radius: 7px;
+         border: none;
+         background: white;
+         color: $deepViolet;
+         position: relative;
+         z-index: 1;
+
+         &::placeholder {
+            color: #C8C2CB;
+         }
+
+         & ~ div.input-state-indicator {
+            height: 100%; width: 100%;
+            position: absolute;
+            background: #DFDEE0;
+            border-radius: 8px;
+         }
+
+         &:focus {
+            color: $deepViolet;
+
+            & ~ div.input-state-indicator {
+               background: linear-gradient(to bottom, #6348FE, #610595);
+            }
+         }
+
+         &:invalid {
+            color: $deepViolet;  
+         }
+
+         &::-webkit-outer-spin-button,
+         &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+         }
+
+         &[type=number] {
+            -moz-appearance: textfield;
+         }
+
+         &[type=submit] {
+            height: 53px;
+            cursor: pointer;
+            color: white;
+            margin-top: 8px;
+            background: linear-gradient(to bottom, $deepViolet, $deepViolet);
+
+
+            &:hover {
+               background: linear-gradient(to bottom, #6348FE, #610595);
+            }
+         }
+      }
+
+      .error-mssg {
+         font-family: Space Grotesk;
+         font-size: 0.75rem; //12px
+         color: $red;
+         display: none;
+      }
+   }
+
+   @include laps {
+      width: 43.81%;
+   }
+
+   @include desktop {
+      margin-top: -4.65vh;
+
+      form {
+         gap: 26px;
+
+         fieldset {
+            gap: 7px;
+
+            &.card-exp-cvc {
+               gap: 20px;
+
+               & > div:nth-child(1) {
+                  width: 46%;
+               }
+            }
+
+            .card-exp {
+               gap: 7px;
+            }
+         }
+
+         input {
+            &[type=submit] {
+               margin-top: 14px  ;
+            }
+         }
+      }
+   }
+
+   @include desktopX {
+      margin: -4.65vh auto 0 24.155vw;
+   }
+}

@@ -1,0 +1,17 @@
+@mixin laps {
+   @media (min-width: 1024px) {
+       @content;   
+   }
+}
+
+@mixin desktop {
+   @media (min-width: 1280px) {
+       @content;   
+   }
+}
+
+@mixin desktopX {
+   @media (min-width: 1440px) {
+       @content;   
+   }
+}
