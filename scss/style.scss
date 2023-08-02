@@ -522,6 +522,7 @@ input.btn {
    @include laps {
       width: calc(100% - 350px);
     //   width: 71.46%;
+      padding: 0px;
       display: flex;
       align-items: center;
       justify-content: center;

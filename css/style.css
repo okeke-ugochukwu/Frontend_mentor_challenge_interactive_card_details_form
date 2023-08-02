@@ -470,6 +470,7 @@ main {
 @media (min-width: 1024px) {
   .card-details-block {
     width: calc(100% - 350px);
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
