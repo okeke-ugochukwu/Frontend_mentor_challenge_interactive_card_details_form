@@ -619,9 +619,6 @@ main {
   }
 }
 @media (min-width: 1280px) {
-  .card-form {
-    margin-top: -4.65vh;
-  }
   .card-form form {
     gap: 26px;
   }
