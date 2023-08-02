@@ -1,186 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title> Interactive Card Details Form </title> 
+   <html lang="en">
+      <head>
+         <title> Interactive Card Details Form </title> 
 
-        <meta charset="UTF-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+         <meta charset="UTF-8">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
          <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
+
+         <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
+         <link rel="stylesheet" href="css/reset.css">
+         <link rel="stylesheet" href="css/style.css">
             
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="theme-color" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!--Open Graph data-->
-        <meta property="og:locale" content="en_US"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content=""/>
-        <meta property="og:description" content=""/>
-        <meta property="og:url" content=""/>
-        <meta property="og:image" content=""/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="600"/>
-        <meta property="og:image:alt" content="Website Image Snippet"/>
-        <meta name="robots" content="follow, index">
+         <meta name="description" content="Frontend Mentor Challenge">
+         <meta name="keywords" content="Frontend, Mentor, Challenge, okeke-ugochukwu, github, developer, card, tilt">
+         <meta name="theme-color" content="">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+         <!--Open Graph data-->
+         <meta property="og:locale" content="en_US"/>
+         <meta property="og:type" content="website"/>
+         <meta property="og:title" content="Interactive Card Details Form"/>
+         <meta property="og:description" content="Frontend Mentor Challenge"/>
+         <meta property="og:url" content=""/>
+         <meta property="og:image" content=""/>
+         <meta property="og:image:width" content="1200"/>
+         <meta property="og:image:height" content="600"/>
+         <meta property="og:image:alt" content="Website Image Snippet"/>
+         <meta name="robots" content="follow, index">
 
-        <!--Twitter Cards-->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="">
-        <meta name="twitter:description" content="">
-        <meta name="twitter:url" content="">
-        <meta name="twitter:image" content="">
+         <!--Twitter Cards-->
+         <meta name="twitter:card" content="summary_large_image">
+         <meta name="twitter:title" content="Interactive Card Details Form">
+         <meta name="twitter:description" content="Frontend Mentor Challenge">
+         <meta name="twitter:url" content="">
+         <meta name="twitter:image" content="">
 
-       
-        
-    </head>
+         
+         
+      </head>
 
-    <body>
-        
-      <main class="">
+      <body>
+         
+         <main class="main">
 
-         <!-- >>>GRADEIENT BG + CARD PREVIEW -->
-         <div class="card-preview-block">
-            <div class="card-preview">
-               
-               <!-- >>>CARD FRONT -->
-               <div class="card card-preview_front">
-                  
-                  <!-- >>LOGO -->
-                  <div class="card_logo">
-                     <div></div>
-                     <div></div>
-                  </div>
+            <!-- >>>GRADEIENT BG + CARD PREVIEW -->
+            <div class="card-preview-block">
+               <div class="card-preview">
+                  <div class="card-preview_inner" data-tilt>
+                     <div class="card-preview__inner">
+                        <div class="card-preview___inner" style="transform: rotateY(0deg);">
+                           <!-- >>>CARD FRONT -->
+                           <div class="card card-preview__front">
 
-                  <!-- >>CARD NUMBER -->
-                  <div class="card_number">
-                     0000 0000 0000 0000
-                  </div>
+                              <!-- >>BG ELEMENTS -->
+                              <div class="card_bg_el">
+                                 <div></div>
+                                 <div></div>
+                                 <div></div>
+                              </div>
+                              
+                              <!-- >>LOGO -->
+                              <div class="card_logo">
+                                 <div></div>
+                                 <div></div>
+                              </div>
 
-                  <!-- >>CARD NAME + EXP. DATE -->
-                  <div class="card_name_and_exp">
-                     <div class="card_name">
-                        Jane Appleseed
-                     </div>
+                              <div class="card_info">
+                              
+                              </div>
 
-                     <div class="card_exp_date">
-                        <span>00</span>/<span>00</span>
-                     </div>
-                  </div>
-                  
-               </div>
-   
-               <!-- >>>CARD BACK -->
-               <div class="card card-preview_back">
+                              <!-- >>CARD NUMBER -->
+                              <div class="card_number" id="card_number">
+                                 0000 0000 0000 0000
+                              </div>
 
-                  <div class="card_bar"></div>
+                              <!-- >>CARD NAME + EXP. DATE -->
+                              <div class="card_name_and_exp">
+                                 <div class="card_name" id="card_name">
+                                    Jane Appleseed
+                                 </div>
 
-                  <div class="card_cvc">
-                     000
-                  </div>
-
-                  <svg class="card_text_illstn" xmlns="http://www.w3.org/2000/svg" width="186" height="26" viewBox="0 0 186 26" fill="none">
-                     <rect width="115" height="4" rx="2" fill="#ADB5BE"/>
-                     <rect x="121" width="22" height="4" rx="2" fill="#ADB5BE"/>
-                     <rect x="149" width="22" height="4" rx="2" fill="#ADB5BE"/>
-                     <rect x="177" width="9" height="4" rx="2" fill="#ADB5BE"/>
-                     <rect width="115" height="4" rx="2" transform="matrix(-1 0 0 1 186 22)" fill="#ADB5BE"/>
-                     <rect width="22" height="4" rx="2" transform="matrix(-1 0 0 1 65 22)" fill="#ADB5BE"/>
-                     <rect width="22" height="4" rx="2" transform="matrix(-1 0 0 1 37 22)" fill="#ADB5BE"/>
-                     <rect width="9" height="4" rx="2" transform="matrix(-1 0 0 1 9 22)" fill="#ADB5BE"/>
-                     <rect x="42" y="11" width="60" height="4" rx="2" fill="#ADB5BE"/>
-                     <rect x="14" y="11" width="22" height="4" rx="2" fill="#ADB5BE"/>
-                     <rect x="108" y="11" width="46" height="4" rx="2" fill="#ADB5BE"/>
-                     <rect x="160" y="11" width="9" height="4" rx="2" fill="#ADB5BE"/>
-                  </svg>
-               </div>
-            </div>
-         </div>
-
-
-         <!-- >>>CARD DETAILS FORM + OTHER INTERACTIONS -->
-         <div class="card-details-block">
-            <div class="card-form">
-               <form onsubmit="VERIFY_INPUTS">
-                  
-                  <!-- >>CARD HOLDER NAME -->
-                  <fieldset>
-                     <label for="cardholder-name">Cardholder Name</label>
-                     
-                     <div class="input-container">
-                        <input class="input" type="text" name="cardholder-name" placeholder="e.g. Jane Appleseed" aria-autocomplete="off" required>
-                        <div class="input-state-indicator"></div>
-                     </div>
-
-                     <span class="error-mssg">
-                        Wrong format, letters only
-                     </span>
-                  </fieldset>
-
-                  <!-- >>CARD NUMBER -->
-                  <fieldset>
-                     <label for="cardholder-name">Card Number</label>
-                     
-                     <div class="input-container">
-                        <input class="input" type="number" name="cardholder-name" placeholder="e.g. 1234 5678 9123 0000" aria-autocomplete="off" required>
-                        <div class="input-state-indicator"></div>
-                     </div>
-
-                     <span class="error-mssg">
-                        Wrong format, numbers only
-                     </span>
-                  </fieldset>
-
-                  <!-- >>CARD EXP & CVC -->
-                  <fieldset class="card-exp-cvc">
-                     <div>
-                        <label for="cardholder-name">Exp. Date (MM/YY)</label>
-                        
-                        <!-- >>MM + YYYY -->
-                        <div class="card-exp">
-                           <div class="input-container">
-                              <input class="input" type="number" min="1" max="12" name="cardholder-name" placeholder="MM" aria-autocomplete="off" required>
-                              <div class="input-state-indicator"></div>
+                                 <div class="card_exp_date">
+                                    <span id="card_month">00</span>/<span id="card_year">00</span>
+                                 </div>
+                              </div>
+                              
                            </div>
 
-                           <div class="input-container">
-                              <input class="input" type="number" min="23" max="99" name="cardholder-name" placeholder="YY" aria-autocomplete="off" required>
-                              <div class="input-state-indicator"></div>
+                           <!-- >>>CARD BACK -->
+                           <div class="card card-preview__back">
+
+                              <div class="card_bar"></div>
+
+                              <div class="card_cvc" id="card_cvc">
+                                 000
+                              </div>
+
+                              <svg class="card_text_illstn" xmlns="http://www.w3.org/2000/svg" width="186" height="26" viewBox="0 0 186 26" fill="none">
+                                 <rect width="115" height="4" rx="2" fill="#ADB5BE"/>
+                                 <rect x="121" width="22" height="4" rx="2" fill="#ADB5BE"/>
+                                 <rect x="149" width="22" height="4" rx="2" fill="#ADB5BE"/>
+                                 <rect x="177" width="9" height="4" rx="2" fill="#ADB5BE"/>
+                                 <rect width="115" height="4" rx="2" transform="matrix(-1 0 0 1 186 22)" fill="#ADB5BE"/>
+                                 <rect width="22" height="4" rx="2" transform="matrix(-1 0 0 1 65 22)" fill="#ADB5BE"/>
+                                 <rect width="22" height="4" rx="2" transform="matrix(-1 0 0 1 37 22)" fill="#ADB5BE"/>
+                                 <rect width="9" height="4" rx="2" transform="matrix(-1 0 0 1 9 22)" fill="#ADB5BE"/>
+                                 <rect x="42" y="11" width="60" height="4" rx="2" fill="#ADB5BE"/>
+                                 <rect x="14" y="11" width="22" height="4" rx="2" fill="#ADB5BE"/>
+                                 <rect x="108" y="11" width="46" height="4" rx="2" fill="#ADB5BE"/>
+                                 <rect x="160" y="11" width="9" height="4" rx="2" fill="#ADB5BE"/>
+                              </svg>
                            </div>
                         </div>
-
-                        <span class="error-mssg">
-                           Can't be blank
-                        </span>
                      </div>
+                  </div>
 
-                     <div>
-                        <label for="cardholder-name">CVC</label>
+                  <button class="btn btn-primary return-btn">
+                     Return
+                  </button>
+               </div>
+            </div>
+
+            <!-- >>>CARD DETAILS FORM + OTHER INTERACTIONS -->
+            <div class="card-details-block">
+               <div class="card-form">
+                  <form action="#" id="form" class="form">
+                     
+                     <!-- >>CARD HOLDER NAME -->
+                     <fieldset>
+                        <label for="cardholder-name">Cardholder Name</label>
                         
                         <div class="input-container">
-                           <input class="input"type="number" min="100" max="999" name="cardholder-name" placeholder="e.g. 123" aria-autocomplete="off" required>
-                           <div class="input-state-indicator"></div>
+                           <input class="input" id="name_input" type="text" name="cardholder-name" placeholder="e.g. Jane Appleseed" autocomplete="off" required>
+                           <div class="input-state-indicator" id="name_input_ind"></div>
                         </div>
 
-                        <span class="error-mssg">
-                           Can't be blank
+                        <span class="error-mssg" id="name_input_err">
+                           
                         </span>
+                     </fieldset>
+
+                     <!-- >>CARD NUMBER -->
+                     <fieldset>
+                        <label for="card-number">Card Number</label>
+                        
+                        <div class="input-container">
+                           <input class="input" id="number_input" type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000" autocomplete="off" required>
+                           <div class="input-state-indicator" id="number_input_ind"></div>
+                        </div>
+
+                        <span class="error-mssg" id="number_input_err">
+                           
+                        </span>
+                     </fieldset>
+
+                     <!-- >>CARD EXP & CVC -->
+                     <fieldset class="card-exp-cvc">
+                        <div>
+                           <label for="card-exp-month">Exp. Date (MM/YY)</label>
+                           
+                           <!-- >>MM + YYYY -->
+                           <div class="card-exp">
+                              <div class="input-container">
+                                 <input class="input" id="month_input" type="number" min="1" max="12" name="card-exp-month" placeholder="MM" autocomplete="off" required>
+                                 <div class="input-state-indicator" id="month_input_ind"></div>
+                              </div>
+
+                              <div class="input-container" >
+                                 <input class="input" id="year_input" type="number" min="23" max="99" name="card-exp-year" placeholder="YY" autocomplete="off" required>
+                                 <div class="input-state-indicator" id="year_input_ind"></div>
+                              </div>
+                           </div>
+
+                           <span class="error-mssg" id="exp_err">
+                              
+                           </span>
+                        </div>
+
+                        <div>
+                           <label for="card-cvc">CVC</label>
+                           
+                           <div class="input-container">
+                              <input class="input" id="cvc_input" type="number" min="100" max="999" name="card-cvc" placeholder="e.g. 123" autocomplete="off" required>
+                              <div class="input-state-indicator" id="cvc_input_ind"></div>
+                           </div>
+
+                           <span class="error-mssg" id="cvc_input_err">
+                              
+                           </span>
+                     </div>
+                     </fieldset>
+                     
+                     <!-- >>SUBMIT BTN -->
+                     <input type="submit" class="btn btn-primary" value="Confirm" id="submit_btn">
+
+                  </form>
+
+                  <div class="confirmation hidden">
+                     <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="40" fill="url(#a)"/>
+                        <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/>
+                        <defs>
+                           <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/>
+                           </linearGradient>
+                        </defs>
+                     </svg>   
+
+                     <h2>
+                        THANK YOU!
+                     </h2>
+
+                     <p>
+                        We’ve added your card details
+                     </p>
+
+                     <div>
+                        <button type="button" class="btn btn-primary continue-btn">Continue</button>
+                        <button type="button" class="btn btn-secondary preview-btn">Preview Card</button>
+                     </div>
                   </div>
-                  </fieldset>
-                  
-                  <!-- >>SUBMIT BTN -->
-                  <input type="submit" value="Confirm">
-
-               </form>
+               </div>
             </div>
-         </div>
 
-      </main>
-       
-        <script type="text/javascript" src="js/script.js"></script>
-    </body>
+         </main>
+         
+         <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+         <script type="text/javascript" src="js/script.js"></script>
+      </body>
 </html>

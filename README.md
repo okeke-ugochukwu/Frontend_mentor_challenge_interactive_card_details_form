@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive card details form
 
-![Design preview for the Interactive card details form coding challenge](./assets/imgs/desktop-preview.jpg)
+![Design preview for the Interactive card details form coding challenge](./imgs/desktop-preview.jpg)
 <br /><br/>
 ___
 ```
