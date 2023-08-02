@@ -643,7 +643,7 @@ main {
 }
 @media (min-width: 1440px) {
   .card-form {
-    margin: -3.15vh auto 0 24.355vw;
+    margin: 0 auto 0 24.355vw;
   }
 }
 
