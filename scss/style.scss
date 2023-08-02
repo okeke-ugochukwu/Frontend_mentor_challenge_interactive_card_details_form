@@ -71,7 +71,7 @@ input.btn {
    max-height: 240px;
    padding: 0.01px;
    position: relative;
-   background: url('/imgs/bg-main-mobile.png') center/cover no-repeat;
+   background: url('../imgs/bg-main-mobile.png') center/cover no-repeat;
 
    &.in-preview {
       background: transparent;
@@ -84,7 +84,7 @@ input.btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url('/imgs/bg-main-desktop.png') center/cover no-repeat;
+      background: url('../imgs/bg-main-desktop.png') center/cover no-repeat;
    }
 
    @include desktop {
