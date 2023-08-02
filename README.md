@@ -4,5 +4,5 @@
 <br /><br/>
 ___
 ```
-Built with SCSS
+Built with HTML/SCSS + JavaScript
 ```
