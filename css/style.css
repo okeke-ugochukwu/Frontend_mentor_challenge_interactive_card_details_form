@@ -5,11 +5,25 @@
 * {
   transition: 0.3s;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
 }
 
 * {
