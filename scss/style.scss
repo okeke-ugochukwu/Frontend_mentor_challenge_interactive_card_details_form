@@ -86,7 +86,6 @@ input.btn {
    @include laps {
       width: 350px;
       height: 100%;
-      min-width: 100vh;
       max-height: unset;
       display: flex;
       align-items: center;
