@@ -69,6 +69,7 @@ main {
   max-height: 240px;
   padding: 0.01px;
   position: relative;
+  padding: 0.01px;
   background: url("../imgs/bg-main-mobile.png") center/cover no-repeat;
 }
 .card-preview-block.in-preview {
@@ -101,7 +102,8 @@ main {
   max-width: 381px;
   height: -moz-max-content;
   height: max-content;
-  margin: 32px auto 0;
+  margin: 0 auto;
+  padding-top: 32px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -373,6 +375,7 @@ main {
     width: -moz-max-content;
     width: max-content;
     margin: 0px auto 0 15.38vw;
+    padding-top: 0px;
   }
   .card-preview .card {
     position: relative;
