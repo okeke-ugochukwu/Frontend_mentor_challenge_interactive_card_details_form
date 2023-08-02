@@ -16,6 +16,11 @@ html {
   font-family: "Space Grotesk", sans-serif;
 }
 
+html {
+  min-height: 100vh;
+  width: 100%;
+}
+
 body {
   width: 100vw;
   min-width: 324px;
@@ -636,6 +641,12 @@ main {
     margin-top: 14px;
   }
 }
+@media (min-width: 1440px) {
+  .card-form {
+    margin: -3.15vh auto 0 24.355vw;
+  }
+}
+
 .confirmation {
   display: flex;
   flex-direction: column;

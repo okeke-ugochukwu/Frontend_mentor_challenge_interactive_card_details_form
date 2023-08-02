@@ -8,6 +8,11 @@
    font-family: 'Space Grotesk', sans-serif;
 }
 
+html {
+   min-height: 100vh;
+   width: 100%;
+}
+
 body {
    width: 100vw;
    min-width: 324px;
@@ -715,6 +720,7 @@ input.btn {
    }
 
    @include desktopX {
+      margin: -3.15vh auto 0 24.355vw;
    }
 }
 
