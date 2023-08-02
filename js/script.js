@@ -182,6 +182,10 @@ previewBtn.addEventListener('click', ()=> {
    INIT_PREVIEW()
 })
 
+continueBtn.addEventListener('click', ()=> {
+   RESET_FORM_STATE()
+})
+
 returnBtn.addEventListener('click', ()=> {
    END_PREVIEW()
 })
@@ -261,17 +265,18 @@ const VERIFY_INPUTS = () => {
    validInputs === 5 ? INIT_SUBMIT_CONFIRMATION() : ' '
 }
 
+
 const SHOW_ERROR = (asset, mssg) => {
    asset.err.el.innerText = mssg
    asset.err.el.classList.add('shown')
    asset.el.classList.add('invalid') 
 }
-
 const REMOVE_ERROR = (asset) => {
    asset.err.el.innerText = ''
    asset.err.el.classList.remove('shown')
    asset.el.classList.remove('invalid') 
 }
+
 
 const INIT_SUBMIT_CONFIRMATION = (e) => {
    submitBtn.value = 'One sec..'
@@ -281,6 +286,7 @@ const INIT_SUBMIT_CONFIRMATION = (e) => {
       formConfirmation.classList.remove('hidden')
    }, 1000);
 }
+
 
 const INIT_PREVIEW = () =>{
 
@@ -309,7 +315,6 @@ const INIT_PREVIEW = () =>{
       main.style.opacity = 1
    }, 1500)
 }
-
 const END_PREVIEW = () => {
    setTimeout(()=> {
       main.style.opacity = 0
@@ -336,6 +341,7 @@ const END_PREVIEW = () => {
    }, 1500)
 }
 
+
 const ROTATE = () => {
    
    if ( cardContainerInrSub.style.transform === "rotateY(0deg)" ) {
@@ -345,12 +351,38 @@ const ROTATE = () => {
       cardContainerInrSub.style.transform = "rotateY(0deg)"
    }
 }
+
+
 const SHOW_INSTRUCTION = () => {
    cardInfo.innerText = 'Double-click to spin'
    cardInfo.classList.add('in-preview')
 }
-
 const HIDE_INSTRUCTION = () => {
    cardInfo.innerText = ''
    cardInfo.classList.remove('in-preview')
+}
+
+const RESET_FORM_STATE = () => {
+
+
+   for (const asset in assets) {
+      assets[asset].el.value = ''
+      assets[asset].el.innerText = ''
+      assets[asset].value.init = document.getElementById(`card_${assets[asset].id}`).innerText.toLowerCase(),
+      assets[asset].value.new = null
+   }
+
+   submitBtn.value = 'Confirm'
+
+   setTimeout(() => {
+      document.querySelector('.card_number').innerText = '0000 0000 0000 0000'
+      document.querySelector('.card_name').innerText = 'Jane Appleseed'
+      document.querySelector('.card_month').innerText = '00'
+      document.querySelector('.card_year').innerText = '00'
+      document.querySelector('.card_cvc').innerText = '000'
+
+      form.classList.remove('hidden')
+      formConfirmation.classList.add('hidden')
+   }, 1000);
+
 }
